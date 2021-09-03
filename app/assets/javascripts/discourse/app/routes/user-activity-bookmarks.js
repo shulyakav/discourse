@@ -5,6 +5,7 @@ export default DiscourseRoute.extend({
 
   queryParams: {
     acting_username: { refreshModel: true },
+    q: { refreshModel: true },
   },
 
   model() {
