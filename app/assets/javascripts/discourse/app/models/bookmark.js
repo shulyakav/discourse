@@ -130,16 +130,6 @@ const Bookmark = RestModel.extend({
     return Topic.create({ id, fancy_title, linked_post_number });
   },
 
-  loadItems(params) {
-    let url = `/u/${this.user.username}/bookmarks.json`;
-
-    if (params) {
-      url += "?" + $.param(params);
-    }
-
-    return ajax(url);
-  },
-
   loadMore(additionalParams) {
     if (!this.more_bookmarks_url) {
       return Promise.resolve();
